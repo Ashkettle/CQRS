@@ -1,0 +1,22 @@
+{
+  "name": "cqrs",
+  "version": "0.0.1",
+  "description": "Example CQRS in JavaScript for Meetup (NOT TO BE USED FOR ANYTHING PRODUCTION)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ashkettle/cqrs.git"
+  },
+  "author": "Richard Ashkettle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashkettle/cqrs/issues"
+  },
+  "homepage": "https://github.com/ashkettle/cqrs#readme",
+  "dependencies": {
+    "node-uuid": "^1.4.7"
+  }
+}
