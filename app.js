@@ -1,10 +1,11 @@
 //This is the entry point for the Application
 //
-var guid = require('./guid');
+var Command = require('./command');
 
-var GUID = new guid();
+var msg = { from: 'me', to: 'you' };
 
+var comm = new Command(msg);
 
-console.log(GUID.empty);
-console.log(GUID.newGUID());
+console.log(comm.message);
+console.log(comm.timestamp);
 
