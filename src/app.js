@@ -8,4 +8,4 @@ var comm = new Command(msg);
 
 console.log(comm.message);
 console.log(comm.timestamp);
-
+console.log(comm.correlationId);
