@@ -4,7 +4,7 @@
   "description": "Example CQRS in JavaScript for Meetup (NOT TO BE USED FOR ANYTHING PRODUCTION)",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha ./*.js",
+    "test": "./node_modules/mocha/bin/mocha tests/*.js --reporter spec",
     "start": "node ./src/app.js"
   },
   "repository": {
@@ -21,6 +21,7 @@
     "node-uuid": "^1.4.7"
   },
   "devDependencies": {
-    "mocha": "^3.0.2"
+    "mocha": "^3.0.2",
+    "should": "^11.1.0"
   }
 }
