@@ -8,8 +8,8 @@ var cf = new CommandFactory();
 var comm = cf.getNewCommand(msg);
 
 console.log(comm.message);
-console.log(comm.timestamp);
-console.log(comm.correlationId);
+//console.log(comm.timestamp);
+//console.log(comm.correlationId);
 
 comm.message = 'foo';
 console.log(comm.message);
