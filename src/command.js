@@ -2,6 +2,11 @@
 
 let guid = require('./guid');
 
+const _correlationId = Symbol('correlationId');
+const _message = Symbol('message');
+const _timestamp = Symbol('timestamp');
+
+
 /**
  *
  *
@@ -10,10 +15,14 @@ let guid = require('./guid');
 let command = class Command {
     constructor(message) {
         let GUID = new guid();
-        this.correlationId = GUID.newGUID();
-        this.message = message;
-        this.timestamp = Date.now();
+	    
+        this[_correlationId] = GUID.newGUID();
+        this[_message] = message;
+        this[_timestamp] = Date.now();
     };
+	get correlationId() { return this[_correlationId]; }
+	get message() { return this[_message]; }
+	get timestamp() { return this[_timestamp]; }
 }
 
 module.exports = class CommandFactory {
