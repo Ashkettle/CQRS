@@ -6,7 +6,7 @@ const _events = Symbol('events');
 
 module.export = class EventStore {
     constructor() {
-        let storage = new eventPersistor();
+        let storage = new eventPersistor(__dirname);
         this[_events] = storage.retrieveEvents();
 
         this.addEvent = (evt) => {
@@ -16,6 +16,7 @@ module.export = class EventStore {
 
         this.getAllEvents = () => {
             //Should attempt a refresh before returning
+            this[_events] = storage.retrieveEvents();
             return this[_events];
         };
 
